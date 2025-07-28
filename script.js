@@ -79,5 +79,19 @@ document.addEventListener('DOMContentLoaded', () =>{
     } else {
         carregarLobinhos();
     }
+    document.getElementById('anterior').addEventListener('click', () =>{
+        if (paginaAtual > 1){
+            paginaAtual--;
+            mostrarPagina(paginaAtual);
+        }
+    })
+    document.getElementById('proximo').addEventListener('click', () =>{
+        const lista = filtrado ? lobosFiltrados : lobos;
+        const totalPaginas = Math.ceil(lobos.length / LobosPorPagina);
+        if (paginaAtual < totalPaginas){
+            paginaAtual++;
+            mostrarPagina(paginaAtual);
+        }
+    })
 })
 carregarLobinhos();

@@ -71,4 +71,13 @@ function renderizarLobinhos(lobinhosPagina){
 function salvarLobos(){
     localStorage.setItem('lobos', JSON.stringify(lobos));
 }
+document.addEventListener('DOMContentLoaded', () =>{
+    if(!localStorage.getItem('lobos')){
+        inicializarLocalStorage().then(() => {
+            carregarLobinhos();
+        })
+    } else {
+        carregarLobinhos();
+    }
+})
 carregarLobinhos();

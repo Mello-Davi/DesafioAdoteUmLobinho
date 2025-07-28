@@ -93,5 +93,15 @@ document.addEventListener('DOMContentLoaded', () =>{
             mostrarPagina(paginaAtual);
         }
     })
+    document.getElementById('btn-filtrar').addEventListener('click', filtrarLobos);
+        
+    document.getElementById('btn-limpar').addEventListener('click', () => {
+        filtrado = false;
+        lobosFiltrados = [];
+        document.getElementById('filtro-nome').value = '';
+        document.getElementById('filtro-adotado').checked = false;
+        paginaAtual = 1;
+        mostrarPagina(paginaAtual);
+    })
 })
 carregarLobinhos();

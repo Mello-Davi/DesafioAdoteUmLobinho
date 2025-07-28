@@ -68,4 +68,7 @@ function renderizarLobinhos(lobinhosPagina){
         container.appendChild(div);
     })
 }
+function salvarLobos(){
+    localStorage.setItem('lobos', JSON.stringify(lobos));
+}
 carregarLobinhos();

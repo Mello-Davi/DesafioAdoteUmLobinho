@@ -13,11 +13,14 @@
     </header>
 
     <main>
-        <form action="">
-            <h1>Coloque um Lobinho para Adoção</h1>
+        <section>
 
-            <section class="dados">
-                
+            <div class="titulo">
+                <h1>Coloque um Lobinho para Adoção</h1>
+            </div>
+
+            <form action="">
+                            
                 <div class="nome">
                     <label for="nome">Nome do Lobinho:</label>
                     <input type="text" id="nome" name="nome">
@@ -28,20 +31,19 @@
                     <input type="number" id="anos" name="anos">
                 </div>
 
-            </section>
+                <div class="link">
+                    <label for="foto">Link da Foto:</label>
+                    <input type="url" id="foto" name="foto">
+                </div>
 
-            <div class="link">
-                <label for="foto">Link da Foto:</label>
-                <input type="url" id="foto" name="foto">
-            </div>
+                <div class="descricao">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" rows="4" cols="50"></textarea>
+                </div>
 
-            <div>
-                <label for="descricao">Descrição:</label>
-                <textarea id="descricao" name="descricao" rows="4" cols="50"></textarea>
-            </div>
-
-            <button class="botao-salvar">Salvar</button>
-        </form>
+                <button class="botao-salvar">Salvar</button>
+            </form>
+        </section>
 
     </main>
     <script src="script.js"></script>

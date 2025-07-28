@@ -49,4 +49,15 @@ function mostrarPagina(pagina){
 function renderizarLobinhos(lobinhosPagina){
     const container = document.getElementById('lobinhos-container');
     container.innerHTML = '';
+    lobinhosPagina.forEach(lobo => {
+        const div = document.createElement('div');
+        div.classList.add('lobo');
+        const adotado = lobo.adotado;
+        div.innerHTML = `<img src="${lobo.imagem}" alt="${lobo.nome}"> 
+        <h2>${lobo.nome}</h2> 
+        <p>Idade: ${lobo.idade}</p>
+        <p>${lobo.descricao}</p>
+        <button ${adotado ? 'disabled' : ''}>${adotado ? 'Adotado' : 'Adotar'}</button>`;
+    })
+}
 carregarLobinhos();

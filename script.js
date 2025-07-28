@@ -65,6 +65,7 @@ function renderizarLobinhos(lobinhosPagina){
             salvarLobos();
             mostrarPagina(paginaAtual);
         })
+        container.appendChild(div);
     })
 }
 carregarLobinhos();

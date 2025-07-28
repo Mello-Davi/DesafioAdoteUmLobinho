@@ -23,9 +23,9 @@
   text-decoration: none;
 }
 
-.logoHome {
-  width: 5.9719rem;
-  height: 6.92rem;
+.logoHome img{
+  width: 95.5504px;
+  height: 110.72px;
   padding: 10px;
 }
 
@@ -74,7 +74,7 @@ iframe {
 .pinLoc img,
 .telefone img,
 .email img {
-  width: 15px;
+  width: 19px;
   height: 19px;
 }
 
@@ -109,4 +109,9 @@ iframe {
   font-size: 18px;
   font-weight: 400;
   font-family: "Darker Grotesque", sans-serif;
+}
+
+.desenvolvidoCom img{
+  width: 104px;
+  height: 104px;
 }

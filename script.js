@@ -58,6 +58,13 @@ function renderizarLobinhos(lobinhosPagina){
         <p>Idade: ${lobo.idade}</p>
         <p>${lobo.descricao}</p>
         <button ${adotado ? 'disabled' : ''}>${adotado ? 'Adotado' : 'Adotar'}</button>`;
+
+        const botao = div.querySelector('button');
+        botao.addEventListener('click', () =>{
+            lobo.adotado = true;
+            salvarLobos();
+            mostrarPagina(paginaAtual);
+        })
     })
 }
 carregarLobinhos();

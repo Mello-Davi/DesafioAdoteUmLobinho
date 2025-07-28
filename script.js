@@ -37,5 +37,13 @@ function mostrarPagina(pagina){
     const inicio = (pagina - 1) * LobosPorPagina;
     const fim = inicio + LobosPorPagina;
     const lobinhosPagina = listaAtual.slice(inicio, fim);
+    
+    if(typeof renderizarLobinhos === 'function'){
+        renderizarLobinhos(lobinhosPagina)
+    }
+    const spanPagina = document.getElementById('pagina-atual');
+    if (spanPagina){
+        spanPagina.textContent = `${pagina} / ${Math.ceil(listaAtual.length /LobosPorPagina)}`;
+    }
 }
 carregarLobinhos();

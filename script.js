@@ -32,4 +32,10 @@ function carregarLobinhos(){
     lobos = JSON.parse(lobinhos);
     mostrarPagina(paginaAtual);
 }
+function mostrarPagina(pagina){
+    const listaAtual = filtrado ? lobosFiltrados : lobos;
+    const inicio = (pagina - 1) * LobosPorPagina;
+    const fim = inicio + LobosPorPagina;
+    const lobinhosPagina = listaAtual.slice(inicio, fim);
+}
 carregarLobinhos();

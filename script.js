@@ -27,3 +27,8 @@ let lobos = [];
 let paginaAtual = 1;
 let lobosFiltrados = [];
 let filtrado = false;
+function carregarLobinhos(){
+    const lobinhos = localStorage.getItem('lobos');
+    lobos = JSON.parse(lobinhos);
+    mostrarPagina(paginaAtual);
+}

@@ -32,3 +32,4 @@ function carregarLobinhos(){
     lobos = JSON.parse(lobinhos);
     mostrarPagina(paginaAtual);
 }
+carregarLobinhos();

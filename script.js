@@ -47,7 +47,7 @@ function mostrarPagina(pagina){
     }
 }
 function renderizarLobinhos(lobinhosPagina){
-    const container = document.getElementById('lobinhos-container');
+    const container = document.getElementById('.planners');
     container.innerHTML = '';
     lobinhosPagina.forEach(lobo => {
         const div = document.createElement('div');
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             mostrarPagina(paginaAtual);
         }
     })
-    document.getElementById('btn-filtrar').addEventListener('click', filtrarLobos);
+    document.getElementById('searchButton').addEventListener('click', filtrarLobos);
         
     document.getElementById('btn-limpar').addEventListener('click', () => {
         filtrado = false;
@@ -105,8 +105,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     })
 })
 function filtrarLobos(){
-    const pesquisa = document.getElementById('filtro-nome').value.trim().toLowerCase();
-    const mostrarAdotados = document.getElementById('filtro-adotados').checked;
+    const pesquisa = document.getElementById('searchInput').value.trim().toLowerCase();
+    const mostrarAdotados = document.getElementById('meuCheckbox').checked;
 
     lobosFiltrados = lobos.filter(lobo =>{
         const nomeIgual = lobo.nome.toLowerCase().includes(pesquisa);

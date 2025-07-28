@@ -104,4 +104,18 @@ document.addEventListener('DOMContentLoaded', () =>{
         mostrarPagina(paginaAtual);
     })
 })
+function filtrarLobos(){
+    const pesquisa = document.getElementById('filtro-nome').value.trim().toLowerCase();
+    const mostrarAdotados = document.getElementById('filtro-adotados').checked;
+
+    lobosFiltrados = lobos.filter(lobo =>{
+        const nomeIgual = lobo.nome.toLowerCase().includes(pesquisa);
+        const adotadoCondiz = mostrarAdotados ? lobo.adotado === true : true;
+        return nomeIgual && adotadoCondiz;
+    })
+    filtrado = true;
+    paginaAtual = 1;
+    mostrarPagina(paginaAtual);
+
+}
 carregarLobinhos();

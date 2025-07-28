@@ -116,6 +116,5 @@ function filtrarLobos(){
     filtrado = true;
     paginaAtual = 1;
     mostrarPagina(paginaAtual);
-
 }
 carregarLobinhos();

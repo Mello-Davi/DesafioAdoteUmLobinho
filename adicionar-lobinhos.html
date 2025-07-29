@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Lobinho - Adote um Lobinho</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/adicionar-lobinhos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap");
     </style>
@@ -20,21 +23,19 @@
 
     <main>
         <section>
-
-            <div class="titulo">
-                <h1>Coloque um Lobinho para Adoção</h1>
-            </div>
+            <h1>Coloque um Lobinho para Adoção</h1>
 
             <form id = "novo-lobo">
                             
-                <div class="nome">
-                    <label for="nome">Nome do Lobinho:</label>
-                    <input type="text" id="nome" name="nome">
-                </div>
-
-                <div class="idade">
-                    <label for="anos">Anos:</label>
-                    <input type="number" id="anos" name="anos">
+                <div class="container">
+                    <div class="nome">
+                        <label for="nome">Nome do Lobinho:</label>
+                        <input type="text" id="nome" name="nome">
+                    </div>
+                    <div class="idade">
+                        <label for="anos">Anos:</label>
+                        <input type="number" id="anos" name="anos">
+                    </div>
                 </div>
 
                 <div class="link">
@@ -46,9 +47,8 @@
                     <label for="descricao">Descrição:</label>
                     <textarea id="descricao" name="descricao" rows="4" cols="50"></textarea>
                 </div>
-
-                <button class="botao-salvar">Salvar</button>
             </form>
+            <button class="botao-salvar">Salvar</button>
         </section>
 
     </main>

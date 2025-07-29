@@ -23,7 +23,7 @@
     text-decoration: none;
   }
   
-  .logoHome img{
+  .logoHome img {
     width: 95.5504px;
     height: 110.72px;
     padding: 10px;
@@ -38,6 +38,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
+  }
+  
+  .rodaPe::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, #deb959, #2c5680);
   }
   
   iframe {
@@ -101,6 +112,7 @@
   .desenvolvidoCom {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-left: 150px;
   }
   
@@ -111,88 +123,108 @@
     font-family: "Darker Grotesque", sans-serif;
   }
   
-  .desenvolvidoCom img{
+  .desenvolvidoCom img {
     width: 104px;
     height: 104px;
   }
+
+  /*--------------------------------MAIN-----------------------------------*/       
+
+main {
+    padding: 50px 221px 112px 221px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 54px 74.11px 50px 72.3px;
+    border: 4px solid #333333;
+}
+section > h1 {
+    margin-bottom: 67px;
+  }
   
-
-    /*--------------------------------MAIN-----------------------------------*/
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 50px 221px 50px 178px;
-        gap: 50px;
-    }
-
-    .imagemBotoesDescricao {
-        display: flex;
-        flex-direction:row;
-        width: 1001px;
-        height: 530px;
-        gap: 52px;
-
-    }
-
-    .imagemBotoesDescricao img {
-        width: 430px;
-        height: 328px;
-    }
-    .imagemLoboEBotoes {
-        width: 471px;
-        height: 530px;
-        position: relative;
-
-    }
-
-  .fundo {
-    position: absolute;
-    width: 430px;
-    height: 328px;
-    background-color: #2c5280;
-    border: solid  5px #333333;
+section > form {
+    margin-bottom: 50px;
   }
 
-  .card {
-    position: absolute;
-    top: 33px;
-    left: 41px;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-  }
-
-  .botoes {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .botoes button {
-    width: 180px;
-    height: 56px;
-    color: #eeeeee;
-    font-weight: 700;
-    border: none;
-    font-size: 18px;
-  }
-  .adote {
-    background-color: #7aac3a;
-  }
-
-  .exclua {
-    background-color: #de5959;
-  }
-
-  .descricaoLobinho {
-    width: 478px;
-    height: 497px;
-    display: flex;
-    flex-direction: column;
-    padding: 33px 0 33px 0;
-    font-size: 24px;
-    font-weight: 400;
+section h1 {
+    font-size: 60px;
+    font-weight: 600;
     font-family: "Darker Grotesque", sans-serif;
-    line-height: 0.9;
-    gap: .625rem;
-  }
+    color: #000000;
+    width: 811.59px;
+    text-align: center;
+}
+
+form {
+    width: 761.53px;
+    height: 512px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.nome,
+.idade,
+.link,
+.descricao {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Darker Grotesque", sans-serif;
+    color: #000000;
+    }
+
+.nome input,
+.idade input,
+.link input {
+    height: 35px;
+    background-color: #e6e6e6;
+    border: 1px solid #000000;
+    }
+
+.nome {
+    width: 564px;
+    height: 87px;
+}
+
+.idade {
+    width: 177.14px;
+    height: 87px;
+}
+
+.link {
+    width: 761px;
+    height: 89px;
+}
+
+.descricao {
+    width: 761px;
+    height: 298px;
+}
+
+.descricao textarea {
+    width: 761px;
+    height: 250px;
+    resize: none;
+    background-color: #e6e6e6;
+    border: 1px solid #000000;
+}
+
+section button {
+    background-color: #2c5680;
+    width: 209px;
+    height: 60px;
+    font-family: 'Roboto', sans-serif;
+
+}

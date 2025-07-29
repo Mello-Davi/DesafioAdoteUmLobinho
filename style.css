@@ -219,6 +219,7 @@ iframe {
   display: flex;
   flex-direction: row;
   padding-top: 30px;
+  gap: 2.5rem;
 }
 
 .protecao,

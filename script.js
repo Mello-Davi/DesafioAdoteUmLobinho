@@ -157,5 +157,47 @@ document.addEventListener('DOMContentLoaded', () =>{
     document.getElementById('searchButton')?.addEventListener('click', filtrarLobos);
     document.getElementById('meuCheckbox')?.addEventListener('change', filtrarLobos); 
 }
+    // ========== adotarLobinho.html ==========
+    else if (path.endsWith('adotarLobinho.html')) {
+        const lobinho = JSON.parse(localStorage.getItem('lobinhoSelecionado'));
+        if (!lobinho) {
+            alert("Nenhum lobinho selecionado.");
+            window.location.href = "listaDeLobinhos.html";
+            return;
+        }
 
-carregarLobinhos();
+        const h1 = document.querySelector('.textoApresentacao h1');
+        const pId = document.querySelector('.textoApresentacao p');
+        if (h1 && pId) {
+            h1.textContent = `Adote o(a) ${lobinho.nome}`;
+            pId.textContent = `ID: ${lobinho.id}`;
+        }
+
+        const form = document.getElementById('novo-lobo');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nomeDono = document.getElementById('nome').value.trim();
+            const idadeDono = parseInt(document.getElementById('anos').value);
+            const email = document.querySelector('input[name="email"]').value.trim();
+
+            lobos = JSON.parse(localStorage.getItem('lobos')) || [];
+            const index = lobos.findIndex(l => parseInt(l.id) === parseInt(lobinho.id));
+
+            if (index === -1) {
+                alert("Erro: Lobinho não encontrado.");
+                return;
+            }
+
+            lobos[index].adotado = true;
+            lobos[index].nomeDono = nomeDono;
+            lobos[index].idadeDono = idadeDono;
+            lobos[index].email = email;
+
+            localStorage.setItem('lobos', JSON.stringify(lobos));
+            localStorage.removeItem('lobinhoSelecionado');
+
+            alert(`Você adotou ${lobos[index].nome}!`);
+            window.location.href = 'listaDeLobinhos.html';
+        });
+    }

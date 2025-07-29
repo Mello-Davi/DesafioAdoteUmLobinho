@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adotar Lobinho - Adote um Lobinho</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="adotar-lobinhos.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap");
     </style>
@@ -19,40 +19,35 @@
     </header>
 
     <main>
-      <div class="conatiner">
-
+      <div class="container">
         <div class="apresentacao">
-          <img src="/assets/loboA.png" alt="Lobo_olhando_para_esquerda">
-          
+          <img src="/assets/loboA.png" alt="Lobo_olhando_para_esquerda" />
+
           <div class="textoApresentacao">
             <h1>Adote o(a) NomeDoLobo</h1>
             <p>ID:314159</p>
           </div>
-
         </div>
 
         <form action="" id="adotar-lobo">
-            
+          <div class="dadosDono">
             <div class="nome">
               <label for="nome">Seu nome:</label>
-              <input type="text" id="nomeDono" name="nome">
+              <input type="text" id="nomeDono" name="nome" />
             </div>
 
             <div class="idade">
               <label for="anos">Idade:</label>
-              <input type="number" id="idadeDono" name="anos">
+              <input type="number" id="idadeDono" name="anos" />
             </div>
-
-            <div class="email">
-              <label for="email">Email:</label>
-              <input type="email" id= "emailDono" name="email">
-            </div>
-
+          </div>
+          <div class="emailDono">
+            <label for="email">Email:</label>
+            <input type="email" id="emailDono" name="email" />
+          </div>
           <button class="botao-adotar">Adotar</button>
-
         </form>
       </div>
-
     </main>
 
     <footer class="rodaPe">

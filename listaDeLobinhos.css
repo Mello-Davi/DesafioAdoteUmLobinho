@@ -129,10 +129,15 @@ iframe {
 }
 
 /*---------------------DIV PROCURA-----------------------*/
-
+main { /*aqui mexe em todos os blocos da página*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .procura {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding-left: 215px;
   margin-bottom: 50px;
 }

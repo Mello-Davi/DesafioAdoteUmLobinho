@@ -47,6 +47,34 @@ function mostrarPagina(pagina){
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+function atualizarNumerosPagina(totalPaginas) {
+    const container = document.getElementById('numeros-pagina');
+    if (!container) return;
+
+    container.innerHTML = '';
+
+    const maxNumerosVisiveis = 5;
+    let inicio = Math.max(1, paginaAtual - Math.floor(maxNumerosVisiveis / 2));
+    let fim = inicio + maxNumerosVisiveis - 1;
+
+    if (fim > totalPaginas) {
+        fim = totalPaginas;
+        inicio = Math.max(1, fim - maxNumerosVisiveis + 1);
+    }
+
+    for (let i = inicio; i <= fim; i++) {
+        const botao = document.createElement('button');
+        botao.textContent = i;
+        if (i === paginaAtual) {
+            botao.classList.add('ativo');
+        }
+        botao.addEventListener('click', () => {
+            paginaAtual = i;
+            mostrarPagina(paginaAtual);
+        });
+        container.appendChild(botao);
+    }
+}
 function renderizarLobinhos(lobinhosPagina){
     const container = document.querySelector('.lobinhos-container');
     container.innerHTML = '';

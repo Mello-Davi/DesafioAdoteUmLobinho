@@ -16,6 +16,12 @@ main h1{
 }
 
 main p{
+    font-size: 24px;
+    text-align: center;
     width: 60rem;
     height: 8.375rem;
+    line-height: 0.9;
+    font-weight: 400;
+    font-family: "Darker Grotesque", sans-serif;
+
 }

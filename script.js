@@ -81,15 +81,27 @@ function renderizarLobinhos(lobinhosPagina){
 
     lobinhosPagina.forEach((lobo, index) => {
         const div = document.createElement('div');
-         const direcao = index % 2 === 0 ? 'lobinho-esquerda' : 'lobinho-direita';
+        const globalIndex = (paginaAtual - 1) * LobosPorPagina + index;
+        const direcao = index % 2 === 0 ? 'lobinho-esquerda' : 'lobinho-direita';
         div.classList.add(direcao);
-        const adotado = lobo.adotado;
-        div.innerHTML = `<img src="${lobo.imagem}" alt="${lobo.nome}"> 
-        <h2>${lobo.nome}</h2> 
-        <p>Idade: ${lobo.idade}</p>
-        <p>${lobo.descricao}</p>
-        <button ${adotado ? 'disabled' : ''}>${adotado ? 'Adotado' : 'Adotar'}</button>`;
 
+        const adotado = lobo.adotado;
+        div.innerHTML = `
+            <img src="${lobo.imagem}" alt="${lobo.nome}">
+            <div class="apresentacao">
+                <div class="adocao">
+                    <div class="nomeIdade">
+                        <h2>${lobo.nome}</h2>
+                        <p>Idade: ${lobo.idade} anos</p>
+                    </div>
+                    <a href="showLobinho.html">
+                        <button ${lobo.adotado ? 'disabled' : ''}>${lobo.adotado ? 'Adotado' : 'Adotar'}</button>
+                    </a>
+
+                </div>
+                <p>${lobo.descricao}</p>
+            </div>
+        `;
         const botao = div.querySelector('button');
         botao.addEventListener('click', () =>{
             lobo.adotado = true;

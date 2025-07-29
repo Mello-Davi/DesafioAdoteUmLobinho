@@ -158,7 +158,30 @@
     position: absolute;
     top: 33px;
     left: 41px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
   }
+
+  .botoes {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .botoes button {
+    width: 180px;
+    height: 56px;
+    color: #eeeeee;
+    border: none;
+  }
+  .adote {
+    background-color: #7aac3a;
+  }
+
+  .exclua {
+    background-color: #de5959;
+  }
+
   .descricaoLobinho {
     width: 478px;
     height: 497px;

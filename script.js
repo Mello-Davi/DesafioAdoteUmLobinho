@@ -27,6 +27,7 @@ let lobos = [];
 let paginaAtual = 1;
 let lobosFiltrados = [];
 let filtrado = false;
+
 function carregarLobinhos(){
     const lobinhos = localStorage.getItem('lobos');
     lobos = JSON.parse(lobinhos);
@@ -41,17 +42,19 @@ function mostrarPagina(pagina){
     if(typeof renderizarLobinhos === 'function'){
         renderizarLobinhos(lobinhosPagina)
     }
-    const spanPagina = document.getElementById('pagina-atual');
-    if (spanPagina){
-        spanPagina.textContent = `${pagina} / ${Math.ceil(listaAtual.length /LobosPorPagina)}`;
-    }
+    const totalPaginas = Math.ceil(listaAtual.length / LobosPorPagina);
+    atualizarNumerosPagina(totalPaginas); 
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function renderizarLobinhos(lobinhosPagina){
-    const container = document.getElementById('.planners');
+    const container = document.querySelector('.lobinhos-container');
     container.innerHTML = '';
-    lobinhosPagina.forEach(lobo => {
+
+    lobinhosPagina.forEach((lobo, index) => {
         const div = document.createElement('div');
-        div.classList.add('lobo');
+         const direcao = index % 2 === 0 ? 'lobinho-esquerda' : 'lobinho-direita';
+        div.classList.add(direcao);
         const adotado = lobo.adotado;
         div.innerHTML = `<img src="${lobo.imagem}" alt="${lobo.nome}"> 
         <h2>${lobo.nome}</h2> 

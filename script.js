@@ -144,9 +144,9 @@ function excluirLobo() {
         console.log('Clique detectado no botão EXCLUIR');
 
         const lobinhoSelecionado = JSON.parse(localStorage.getItem('lobinhoSelecionado'));
-        const lobos = JSON.parse(localStorage.getItem('lobos')) || [];
+        lobos = JSON.parse(localStorage.getItem('lobos')) || [];
 
-        const index = lobos.findIndex(lobo => lobo.id === lobinhoSelecionado.id);
+        const index = lobos.findIndex(lobo => parseInt(lobo.id) === parseInt(lobinhoSelecionado.id));
 
         if (index !== -1) {
             if (confirm(`Tem certeza que deseja excluir o lobinho "${lobos[index].nome}"?`)) {

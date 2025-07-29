@@ -129,6 +129,39 @@ function filtrarLobos() {
     paginaAtual = 1;
     mostrarPagina(paginaAtual);
 }
+
+function excluirLobo() {
+    const botaoExcluir = document.getElementById('btn_excluir');
+
+    if (!botaoExcluir) {
+        console.error('Botão EXCLUIR não encontrado no DOM.');
+        return;
+    }
+
+    console.log('Botão EXCLUIR encontrado. Adicionando evento...');
+
+    botaoExcluir.addEventListener('click', () => {
+        console.log('Clique detectado no botão EXCLUIR');
+
+        const lobinhoSelecionado = JSON.parse(localStorage.getItem('lobinhoSelecionado'));
+        const lobos = JSON.parse(localStorage.getItem('lobos')) || [];
+
+        const index = lobos.findIndex(lobo => lobo.id === lobinhoSelecionado.id);
+
+        if (index !== -1) {
+            if (confirm(`Tem certeza que deseja excluir o lobinho "${lobos[index].nome}"?`)) {
+                lobos.splice(index, 1);
+                localStorage.setItem('lobos', JSON.stringify(lobos));
+                localStorage.removeItem('lobinhoSelecionado');
+                window.location.href = 'listaDeLobinhos.html';
+                return;
+            }
+        } else {
+            console.warn("Lobinho não encontrado para exclusão.");
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () =>{
     const path = window.location.pathname;
 

@@ -137,7 +137,6 @@ main { /*aqui mexe em todos os blocos da página*/
 .procura {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding-left: 215px;
   margin-bottom: 50px;
 }

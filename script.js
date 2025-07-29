@@ -138,42 +138,30 @@ document.addEventListener('DOMContentLoaded', () =>{
     } else {
         carregarLobinhos();
     }
-    document.getElementById('anterior').addEventListener('click', () =>{
-        if (paginaAtual > 1){
-            paginaAtual--;
-            mostrarPagina(paginaAtual);
-        }
-    })
-    document.getElementById('proximo').addEventListener('click', () =>{
-        const lista = filtrado ? lobosFiltrados : lobos;
-        const totalPaginas = Math.ceil(lobos.length / LobosPorPagina);
-        if (paginaAtual < totalPaginas){
-            paginaAtual++;
-            mostrarPagina(paginaAtual);
-        }
-    })
-    document.getElementById('searchButton').addEventListener('click', filtrarLobos);
-        
-    document.getElementById('btn-limpar').addEventListener('click', () => {
-        filtrado = false;
-        lobosFiltrados = [];
-        document.getElementById('filtro-nome').value = '';
-        document.getElementById('filtro-adotado').checked = false;
-        paginaAtual = 1;
-        mostrarPagina(paginaAtual);
-    })
-})
-function filtrarLobos(){
-    const pesquisa = document.getElementById('searchInput').value.trim().toLowerCase();
-    const mostrarAdotados = document.getElementById('meuCheckbox').checked;
+    const anterior = document.getElementById('anterior');
+    const proximo = document.getElementById('proximo');
 
-    lobosFiltrados = lobos.filter(lobo =>{
-        const nomeIgual = lobo.nome.toLowerCase().includes(pesquisa);
-        const adotadoCondiz = mostrarAdotados ? lobo.adotado === true : true;
-        return nomeIgual && adotadoCondiz;
-    })
-    filtrado = true;
-    paginaAtual = 1;
-    mostrarPagina(paginaAtual);
-}
+    if (anterior) {
+        anterior.addEventListener('click', () => {
+            if (paginaAtual > 1) {
+                paginaAtual--;
+                mostrarPagina(paginaAtual);
+            }
+        });
+    }
+    if (proximo) {
+        proximo.addEventListener('click', () => {
+            const lista = filtrado ? lobosFiltrados : lobos;
+            const totalPaginas = Math.ceil(lista.length / LobosPorPagina);
+            if (paginaAtual < totalPaginas) {
+                paginaAtual++;
+                mostrarPagina(paginaAtual);
+            }
+        });
+    }
+    
+    document.getElementById('searchButton')?.addEventListener('click', filtrarLobos);
+    document.getElementById('meuCheckbox')?.addEventListener('change', filtrarLobos); 
+})
+
 carregarLobinhos();

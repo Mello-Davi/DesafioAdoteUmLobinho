@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             pId.textContent = `ID: ${lobinho.id}`;
         }
 
-        const form = document.getElementById('novo-lobo');
+        const form = document.getElementById('adotar-lobo');
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 

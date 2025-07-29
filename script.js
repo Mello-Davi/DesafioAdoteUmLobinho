@@ -249,3 +249,45 @@ document.addEventListener('DOMContentLoaded', () =>{
         if (img) img.src = lobinho.imagem;
         excluirLobo();
     }
+       // ========== adicionar novo lobinho ==========
+    const formNovoLobo = document.getElementById('novo-lobo');
+    if (formNovoLobo) {
+        formNovoLobo.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value.trim();
+            const idade = parseInt(document.getElementById('anos').value);
+            const imagem = document.getElementById('foto').value.trim();
+            const descricao = document.getElementById('descricao').value.trim();
+
+            if (!nome || isNaN(idade) || !imagem || !descricao) {
+                alert('Por favor, preencha todos os campos corretamente.');
+                return;
+            }
+
+            const lobosAtuais = JSON.parse(localStorage.getItem('lobos')) || [];
+            const maiorId = lobosAtuais.reduce((max, lobo) => Math.max(max, lobo.id || 0), 0);
+            const novoId = maiorId + 1;
+
+            const novoLobo = {
+                id: novoId,
+                nome: nome,
+                idade: idade,
+                imagem: imagem,
+                descricao: descricao,
+                adotado: false,
+                nomeDono: null,
+                idadeDono: null,
+                email: null
+            };
+
+            lobosAtuais.push(novoLobo);
+            localStorage.setItem('lobos', JSON.stringify(lobosAtuais));
+
+            e.target.reset();
+            window.location.href = "listaDeLobinhos.html";
+        });
+    }
+
+});
+

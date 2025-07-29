@@ -233,6 +233,8 @@ document.addEventListener('DOMContentLoaded', () =>{
             window.location.href = 'listaDeLobinhos.html';
         });
     }
+
+    // =========== Show Lobinho =========
     else if (path.endsWith('showLobinho.html')) {
         const lobinho = JSON.parse(localStorage.getItem('lobinhoSelecionado'));
         if (!lobinho) {

@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*--------------------------------HEADER-----------------------------------*/
+  
+  .cabecalho {
+    width: 100%;
+    height: 130px;
+    background-color: #85cdf5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .textoCabecalho {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Darker Grotesque", sans-serif;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .logoHome img{
+    width: 95.5504px;
+    height: 110.72px;
+    padding: 10px;
+  }
+  
+  /*--------------------------------FOOTER-----------------------------------*/
+  
+  .rodaPe {
+    width: 100%;
+    height: 270px;
+    background-color: #333333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  iframe {
+    width: 250px;
+    height: 168px;
+    padding-left: 209px;
+  }
+  
+  .contatoEQuemSomos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+  }
+  
+  .pinLoc,
+  .telefone,
+  .email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .pinLoc p,
+  .telefone p,
+  .email p {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Darker Grotesque", sans-serif;
+  }
+  
+  .pinLoc img,
+  .telefone img,
+  .email img {
+    width: 19px;
+    height: 19px;
+  }
+  
+  .contatoEQuemSomos a {
+    text-decoration: none;
+  }
+  
+  .contatoEQuemSomos button {
+    width: 144px;
+    height: 30px;
+    padding-bottom: 5px;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: "Darker Grotesque", sans-serif;
+    color: #353535;
+    background-color: #deb959;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+  
+  .desenvolvidoCom {
+    display: flex;
+    flex-direction: column;
+    padding-left: 150px;
+  }
+  
+  .desenvolvidoCom p {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Darker Grotesque", sans-serif;
+  }
+  
+  .desenvolvidoCom img{
+    width: 104px;
+    height: 104px;
+  }
+  
+
+    /*--------------------------------MAIN-----------------------------------*/
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 221px 50px 178px;
+        gap: 50px;
+    }
+
+    .imagemBotoesDescricao {
+        display: flex;
+        flex-direction:row;
+        width: 1001px;
+        height: 530px;
+        gap: 52px;
+
+    }
+
+    .imagemBotoesDescricao img {
+        width: 430px;
+        height: 328px;
+    }
+    .imagemLoboEBotoes {
+        width: 471px;
+        height: 530px;
+        position: relative;
+
+    }
+
+  .fundo {
+    position: absolute;
+    width: 430px;
+    height: 328px;
+    background-color: #2c5280;
+    border: solid  5px #333333;
+  }
+
+  .card {
+    position: absolute;
+    top: 33px;
+    left: 41px;
+  }
+  .descricaoLobinho {
+    width: 478px;
+    height: 530px;
+    padding: 33px 0 33px 0;
+    font-size: 24px;
+    font-weight: 400;
+  }

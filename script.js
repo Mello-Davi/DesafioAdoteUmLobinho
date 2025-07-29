@@ -214,23 +214,23 @@ document.addEventListener('DOMContentLoaded', () =>{
             const idadeDono = parseInt(document.getElementById('anos').value);
             const email = document.querySelector('input[name="email"]').value.trim();
 
-            lobos = JSON.parse(localStorage.getItem('lobos')) || [];
-            const index = lobos.findIndex(l => parseInt(l.id) === parseInt(lobinho.id));
+            const lobosAtuais = JSON.parse(localStorage.getItem('lobos')) || [];
+            const index = lobosAtuais.findIndex(l => parseInt(l.id) === parseInt(lobinho.id));
 
             if (index === -1) {
                 alert("Erro: Lobinho não encontrado.");
                 return;
             }
 
-            lobos[index].adotado = true;
-            lobos[index].nomeDono = nomeDono;
-            lobos[index].idadeDono = idadeDono;
-            lobos[index].email = email;
+            lobosAtuais[index].adotado = true;
+            lobosAtuais[index].nomeDono = nomeDono;
+            lobosAtuais[index].idadeDono = idadeDono;
+            lobosAtuais[index].email = email;
 
-            localStorage.setItem('lobos', JSON.stringify(lobos));
+            localStorage.setItem('lobos', JSON.stringify(lobosAtuais));
             localStorage.removeItem('lobinhoSelecionado');
 
-            alert(`Você adotou ${lobos[index].nome}!`);
+            alert(`Você adotou ${lobosAtuais[index].nome}!`);
             window.location.href = 'listaDeLobinhos.html';
         });
     }

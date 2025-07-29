@@ -132,6 +132,9 @@
 
 main {
     padding: 50px 221px 112px 221px;
+    display: flex;
+    justify-content: center;
+
 }
 
 section {

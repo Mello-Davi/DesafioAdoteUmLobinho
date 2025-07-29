@@ -210,9 +210,9 @@ document.addEventListener('DOMContentLoaded', () =>{
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const nomeDono = document.getElementById('nome').value.trim();
-            const idadeDono = parseInt(document.getElementById('anos').value);
-            const email = document.querySelector('input[name="email"]').value.trim();
+            const nomeDono = document.getElementById('nomeDono').value.trim();
+            const idadeDono = parseInt(document.getElementById('idadeDono').value);
+            const emailDono = document.getElementById('emailDono').value.trim();
 
             const lobosAtuais = JSON.parse(localStorage.getItem('lobos')) || [];
             const index = lobosAtuais.findIndex(l => parseInt(l.id) === parseInt(lobinho.id));
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             lobosAtuais[index].adotado = true;
             lobosAtuais[index].nomeDono = nomeDono;
             lobosAtuais[index].idadeDono = idadeDono;
-            lobosAtuais[index].email = email;
+            lobosAtuais[index].emailDono = emailDono;
 
             localStorage.setItem('lobos', JSON.stringify(lobosAtuais));
             localStorage.removeItem('lobinhoSelecionado');

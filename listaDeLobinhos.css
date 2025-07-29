@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*--------------------------------HEADER-----------------------------------*/
+
+.cabecalho {
+  width: 100%;
+  height: 130px;
+  background-color: #85cdf5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.textoCabecalho {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Darker Grotesque", sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+.logoHome img {
+  width: 95.5504px;
+  height: 110.72px;
+  padding: 10px;
+}
+
+/*--------------------------------FOOTER-----------------------------------*/
+
+.rodaPe {
+  width: 100%;
+  height: 270px;
+  background-color: #333333;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.rodaPe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, #deb959, #2c5680);
+}
+
+iframe {
+  width: 250px;
+  height: 168px;
+  padding-left: 209px;
+}
+
+.contatoEQuemSomos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 30px;
+}
+
+.pinLoc,
+.telefone,
+.email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.pinLoc p,
+.telefone p,
+.email p {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+.pinLoc img,
+.telefone img,
+.email img {
+  width: 19px;
+  height: 19px;
+}
+
+.contatoEQuemSomos a {
+  text-decoration: none;
+}
+
+.contatoEQuemSomos button {
+  width: 144px;
+  height: 30px;
+  padding-bottom: 5px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Darker Grotesque", sans-serif;
+  color: #353535;
+  background-color: #deb959;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.desenvolvidoCom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 150px;
+}
+
+.desenvolvidoCom p {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+.desenvolvidoCom img {
+  width: 104px;
+  height: 104px;
+}
+
+/*---------------------DIV PROCURA-----------------------*/
+
+.procura {
+  display: flex;
+  flex-direction: column;
+  padding-left: 215px;
+  margin-bottom: 50px;
+}
+
+.procura label {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Darker Grotesque", sans-serif;
+  padding-left: 50px;
+}
+
+.pesquisa {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 50px 10px;
+}
+
+.pesquisa input {
+  padding-left: 40px;
+  width: 808px;
+  height: 47px;
+  font-size: 16px;
+}
+
+.pesquisa button {
+  width: 130px;
+  height: 49px;
+  padding-bottom: 5px;
+  font-size: 36px;
+  font-weight: 600;
+  font-family: "Darker Grotesque", sans-serif;
+  color: white;
+  background-color: #deb959;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-left: 20px;
+}
+
+.pesquisa img {
+  position: absolute;
+  margin-left: 50px;
+  left: 10px;
+  top: 70%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+}

@@ -103,16 +103,32 @@ function renderizarLobinhos(lobinhosPagina){
             </div>
         `;
         const botao = div.querySelector('button');
-        botao.addEventListener('click', () =>{
+        const link = div.querySelector('a');
+         botao.addEventListener('click', () => {
             lobo.adotado = true;
             salvarLobos();
             mostrarPagina(paginaAtual);
-        })
+        });
+
         container.appendChild(div);
-    })
+    });
 }
 function salvarLobos(){
     localStorage.setItem('lobos', JSON.stringify(lobos));
+}
+function filtrarLobos() {
+    const pesquisa = document.getElementById('searchInput')?.value.trim().toLowerCase() || '';
+    const mostrarAdotados = document.getElementById('meuCheckbox')?.checked;
+
+    lobosFiltrados = lobos.filter(lobo => {
+        const nomeIgual = lobo.nome.toLowerCase().includes(pesquisa);
+        const adotadoCondiz = mostrarAdotados ? lobo.adotado === true : true;
+        return nomeIgual && adotadoCondiz;
+    });
+
+    filtrado = true;
+    paginaAtual = 1;
+    mostrarPagina(paginaAtual);
 }
 document.addEventListener('DOMContentLoaded', () =>{
     if(!localStorage.getItem('lobos')){

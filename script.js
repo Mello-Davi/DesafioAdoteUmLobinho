@@ -136,36 +136,26 @@ document.addEventListener('DOMContentLoaded', () =>{
     if (path.endsWith('listaDeLobinhos.html')) {
 
         if(!localStorage.getItem('lobos')){
-            inicializarLocalStorage().then(() => {
-                carregarLobinhos();
-            })
+            inicializarLocalStorage().then(() => carregarLobinhos());
         } else {
             carregarLobinhos();
         }
-        const anterior = document.getElementById('anterior');
-        const proximo = document.getElementById('proximo');
-
-        if (anterior) {
-            anterior.addEventListener('click', () => {
-                if (paginaAtual > 1) {
-                    paginaAtual--;
-                    mostrarPagina(paginaAtual);
-                }
-            });
-        }
-        if (proximo) {
-            proximo.addEventListener('click', () => {
-                const lista = filtrado ? lobosFiltrados : lobos;
-                const totalPaginas = Math.ceil(lista.length / LobosPorPagina);
-                if (paginaAtual < totalPaginas) {
-                    paginaAtual++;
-                    mostrarPagina(paginaAtual);
-                }
-            });
-        }
-    
+        document.getElementById('anterior')?.addEventListener('click', () => {
+            if (paginaAtual > 1) {
+                paginaAtual--;
+                mostrarPagina(paginaAtual);
+            }
+        });
+        document.getElementById('proximo')?.addEventListener('click', () => {
+            const lista = filtrado ? lobosFiltrados : lobos;
+            const totalPaginas = Math.ceil(lista.length / LobosPorPagina);
+            if (paginaAtual < totalPaginas) {
+                paginaAtual++;
+                mostrarPagina(paginaAtual);
+            }
+        });
     document.getElementById('searchButton')?.addEventListener('click', filtrarLobos);
     document.getElementById('meuCheckbox')?.addEventListener('change', filtrarLobos); 
-})
+}
 
 carregarLobinhos();

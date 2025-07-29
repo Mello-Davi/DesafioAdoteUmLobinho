@@ -234,3 +234,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             window.location.href = 'listaDeLobinhos.html';
         });
     }
+    else if (path.endsWith('showLobinho.html')) {
+        const lobinho = JSON.parse(localStorage.getItem('lobinhoSelecionado'));
+        if (!lobinho) {
+            alert("Nenhum lobinho selecionado.");
+            window.location.href = "listaDeLobinhos.html";
+            return;
+        }
+
+        const h1 = document.querySelector('.nomeDoLobo');
+        if (h1) h1.textContent = lobinho.nome;
+
+        const img = document.querySelector('.imagemLoboEBotoes img');
+        if (img) img.src = lobinho.imagem;
+        excluirLobo();
+    }

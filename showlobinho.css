@@ -196,3 +196,16 @@
     line-height: 0.9;
     gap: .625rem;
   }
+
+  .descricaoLobinho {
+    width: 478px;
+    height: 497px;
+    display: flex;
+    flex-direction: column;
+    padding: 33px 0 33px 0;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Darker Grotesque", sans-serif;
+    line-height: 0.9;
+    gap: .625rem;
+  }

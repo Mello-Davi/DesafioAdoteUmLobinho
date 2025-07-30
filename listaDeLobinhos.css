@@ -138,6 +138,7 @@ main { /*aqui mexe em todos os blocos da página*/
   display: flex;
   flex-direction: column;
   gap: .3125rem;
+  gap: 3.125rem;
 }
 .lobinhos-container img{
   width: 100%;
@@ -151,6 +152,7 @@ main { /*aqui mexe em todos os blocos da página*/
   height: 22.5625rem;
   display: flex;
   flex-direction: row;
+  gap: 3.125rem;
 
 }
 .lobinho-direita{
@@ -158,6 +160,7 @@ main { /*aqui mexe em todos os blocos da página*/
   height: 22.5625rem;
   display: flex;
   flex-direction: row;
+  gap: 3.125rem;
 
 }
 .procura {

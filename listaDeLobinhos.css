@@ -238,6 +238,10 @@ main { /*aqui mexe em todos os blocos da página*/
   display: flex;
   flex-direction: row-reverse;
 }
+.lobinho-direita .apresentacao .adocao .ver-lobo{
+  display: flex;
+  
+}
 
 .adocao .ver-lobo {
   width: 157px;
@@ -253,8 +257,7 @@ main { /*aqui mexe em todos os blocos da página*/
   justify-content: center;
   align-items: center;
   border: none;
-  margin-left: 150px;
-  margin-top: 15px;
+  margin-right: 9.375rem;
 }
 
 .nomeIdade {

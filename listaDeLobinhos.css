@@ -279,6 +279,8 @@ main { /*aqui mexe em todos os blocos da página*/
   align-items: center;
   width: 165px;
   height: 21px;
+  padding-top: 3.125rem;
+  padding-bottom: 1.6875rem;
   gap: .3125rem;
 }
 .numeros-pagina{

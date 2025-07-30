@@ -30,7 +30,6 @@
 }
 
 /*--------------------------------FOOTER-----------------------------------*/
-
 .rodaPe {
   width: 100%;
   height: 270px;
@@ -39,6 +38,7 @@
   flex-direction: row;
   align-items: center;
   position: relative;
+  justify-content: center;
 }
 
 .rodaPe::before {
@@ -51,10 +51,15 @@
   background: linear-gradient(to right, #deb959, #2c5680);
 }
 
+.containerFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 iframe {
   width: 250px;
   height: 168px;
-  padding-left: 209px;
 }
 
 .contatoEQuemSomos {

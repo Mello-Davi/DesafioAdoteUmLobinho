@@ -234,6 +234,11 @@ main { /*aqui mexe em todos os blocos da página*/
   align-items: flex-start;
 }
 
+.lobinho-direita .apresentacao .adocao{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .adocao .ver-lobo {
   width: 157px;
   height: 46px;

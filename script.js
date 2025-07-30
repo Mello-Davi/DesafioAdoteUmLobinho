@@ -102,6 +102,13 @@ function renderizarLobinhos(lobinhosPagina){
             </div>
         `;
         const botao = div.querySelector('.ver-lobo');
+        if (lobo.adotado) {
+            botao.style.backgroundColor = 'green';
+            botao.style.color = 'white';
+            } else {
+            botao.style.backgroundColor = 'yellow';
+            botao.style.color = 'white';
+            }
 
         if (!lobo.adotado) {
             botao.addEventListener('click', () => {

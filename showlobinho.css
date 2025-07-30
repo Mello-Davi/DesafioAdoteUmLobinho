@@ -172,9 +172,13 @@
     width: 180px;
     height: 56px;
     color: #eeeeee;
+<<<<<<< HEAD
     font-weight: 700;
     border: none;
     font-size: 18px;
+=======
+    border: none;
+>>>>>>> css-pamella
   }
   .adote {
     background-color: #7aac3a;
@@ -195,6 +199,7 @@
     font-family: "Darker Grotesque", sans-serif;
     line-height: 0.9;
     gap: .625rem;
+<<<<<<< HEAD
   }
 
   .descricaoLobinho {
@@ -208,4 +213,6 @@
     font-family: "Darker Grotesque", sans-serif;
     line-height: 0.9;
     gap: .625rem;
+=======
+>>>>>>> css-pamella
   }

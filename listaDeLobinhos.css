@@ -270,3 +270,16 @@ main { /*aqui mexe em todos os blocos da página*/
   line-height: 0.9;
   padding-bottom: 25px;
 }
+.paginacao{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 165px;
+  height: 21px;
+  gap: .3125rem;
+}
+.numeros-pagina{
+  display: flex;
+  flex-direction: row;
+  gap: .3125rem;
+}

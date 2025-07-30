@@ -102,6 +102,13 @@ function renderizarLobinhos(lobinhosPagina){
             </div>
         `;
         const botao = div.querySelector('.ver-lobo');
+        if (lobo.adotado) {
+            botao.style.backgroundColor = 'green';
+            botao.style.color = 'white';
+            } else {
+            botao.style.backgroundColor = 'yellow';
+            botao.style.color = 'white';
+            }
 
         if (!lobo.adotado) {
             botao.addEventListener('click', () => {
@@ -164,6 +171,28 @@ function excluirLobo() {
 
 document.addEventListener('DOMContentLoaded', () =>{
     const path = window.location.pathname;
+
+    // ========== index.html ===========
+  if (path.endsWith('index.html') || path.endsWith('/')) {
+    const lobos = JSON.parse(localStorage.getItem('lobos')) || [];
+
+    if (lobos.length < 2) return;
+
+    const lobosAleatorios = lobos.sort(() => 0.5 - Math.random()).slice(0, 2);
+
+    const [loboA, loboB] = lobosAleatorios;
+
+    document.getElementById('imagemLoboA').src = loboA.imagem;
+    document.getElementById('nomeLoboA').textContent = loboA.nome;
+    document.getElementById('idadeLoboA').textContent = `Idade: ${loboA.idade} anos`;
+    document.getElementById('descricaoLoboA').textContent = loboA.descricao;
+
+
+    document.getElementById('imagemLoboB').src = loboB.imagem;
+    document.getElementById('nomeLoboB').textContent = loboB.nome;
+    document.getElementById('idadeLoboB').textContent = `Idade: ${loboB.idade} anos`;
+    document.getElementById('descricaoLoboB').textContent = loboB.descricao;
+  }
 
     // ========== listaDeLobinhos.html ==========
     if (path.endsWith('listaDeLobinhos.html')) {

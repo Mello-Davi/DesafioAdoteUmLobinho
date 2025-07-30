@@ -159,9 +159,16 @@ main { /*aqui mexe em todos os blocos da página*/
   width: 62.4375rem;
   height: 22.5625rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   gap: 3.125rem;
 
+}
+.lobinho-direita .apresentacao{
+  display: flex;
+  flex-direction: column;
+}
+.lobinho-direita .apresentacao p{
+  text-align: end;
 }
 .procura {
   display: flex;

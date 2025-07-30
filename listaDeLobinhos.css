@@ -177,7 +177,7 @@ main { /*aqui mexe em todos os blocos da página*/
   font-size: 16px;
 }
 
-.pesquisa button {
+.button {
   width: 130px;
   height: 49px;
   padding-bottom: 5px;

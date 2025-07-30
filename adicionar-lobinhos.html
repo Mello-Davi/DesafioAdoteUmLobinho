@@ -1,89 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adicionar Lobinho - Adote um Lobinho</title>
     <link rel="stylesheet" href="/adicionar-lobinhos.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap");
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header class="cabecalho">
-        <a href="listaDeLobinhos.html" class="textoCabecalho">Nossos Lobinhos</a>
-        <a href="index.html" class="logoHome">
-          <img src="./assets/logoHome.png" alt="Logo Home"
-        /></a>
-        <a href="quemSomos.html" class="textoCabecalho">Quem Somos</a>
-      </header>
+      <a href="listaDeLobinhos.html" class="textoCabecalho">Nossos Lobinhos</a>
+      <a href="index.html" class="logoHome">
+        <img src="./assets/logoHome.png" alt="Logo Home"
+      /></a>
+      <a href="quemSomos.html" class="textoCabecalho">Quem Somos</a>
+    </header>
 
     <main>
-        <section>
-            <h1>Coloque um Lobinho para Adoção</h1>
+      <section>
+        <h1>Coloque um Lobinho para Adoção</h1>
 
-            <form id = "novo-lobo">
-                            
-                <div class="container">
-                    <div class="nome">
-                        <label for="nome">Nome do Lobinho:</label>
-                        <input type="text" id="nome" name="nome" required>
-                    </div>
-                    <div class="idade">
-                        <label for="anos">Anos:</label>
-                        <input type="number" id="anos" name="anos" required>
-                    </div>
-                </div>
+        <form id="novo-lobo">
+          <div class="container">
+            <div class="nome">
+              <label for="nome">Nome do Lobinho:</label>
+              <input type="text" id="nome" name="nome" required />
+            </div>
+            <div class="idade">
+              <label for="anos">Anos:</label>
+              <input type="number" id="anos" name="anos" required />
+            </div>
+          </div>
 
-                <div class="link">
-                    <label for="foto">Link da Foto:</label>
-                    <input type="url" id="foto" name="foto" required>
-                </div>
+          <div class="link">
+            <label for="foto">Link da Foto:</label>
+            <input type="url" id="foto" name="foto" required />
+          </div>
 
-                <div class="descricao">
-                    <label for="descricao">Descrição:</label>
-                    <textarea id="descricao" name="descricao" rows="4" cols="50" required></textarea>
-                </div>
-            </form>
-            <button class="botao-salvar">Salvar</button>
-        </section>
-
+          <div class="descricao">
+            <label for="descricao">Descrição:</label>
+            <textarea
+              id="descricao"
+              name="descricao"
+              rows="4"
+              cols="50"
+              required
+            ></textarea>
+          </div>
+        </form>
+        <button class="botao-salvar">Salvar</button>
+      </section>
     </main>
     <script src="script.js"></script>
 
     <footer class="rodaPe">
-        
-        <div class="faixaGradiente"></div>
-        
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.187190181296!2d-43.13583512374025!3d-22.906465479255257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99817e444e692b%3A0xfd5e35fb577af2f5!2sUFF%20-%20Instituto%20de%20Computa%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1753705919579!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="faixaGradiente"></div>
 
-        <div class="contatoEQuemSomos">
-            
-            <div class="pinLoc">
-                <img src="./assets/footer/pinLoc.png" alt="Ícone de um pin de localização.">
-                <p>Av. Milton Tavares de Souza, s/n - Sala 115 B - Boa Viagem, Niterói - RJ, 24210-315</p>
-            </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.187190181296!2d-43.13583512374025!3d-22.906465479255257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99817e444e692b%3A0xfd5e35fb577af2f5!2sUFF%20-%20Instituto%20de%20Computa%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1753705919579!5m2!1spt-BR!2sbr"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
 
-            <div class="telefone">
-                <img src="./assets/footer/telefone.png" alt="Ícone de um telefone.">
-                <p>(99) 99999-9999</p>
-            </div>
-
-            <div class="email">
-                <img src="./assets/footer/email.png" alt="Ícone de caixa de email.">
-                <p>salve-lobos@lobINhos.com</p>
-            </div>
-
-            <a href="quemSomos.html"><button>Quem Somos</button></a>
+      <div class="contatoEQuemSomos">
+        <div class="pinLoc">
+          <img
+            src="./assets/footer/pinLoc.png"
+            alt="Ícone de um pin de localização."
+          />
+          <p>
+            Av. Milton Tavares de Souza, s/n - Sala 115 B - Boa Viagem, Niterói
+            - RJ, 24210-315
+          </p>
         </div>
 
-        <div class="desenvolvidoCom">
-            <p>Desenvolvido com</p>
-            <img src="./assets/footer/pata(desenvolvidoCom).png" alt="Ícone de pata de lobo da empresa colaboradora.">
+        <div class="telefone">
+          <img src="./assets/footer/telefone.png" alt="Ícone de um telefone." />
+          <p>(99) 99999-9999</p>
         </div>
+
+        <div class="email">
+          <img src="./assets/footer/email.png" alt="Ícone de caixa de email." />
+          <p>salve-lobos@lobINhos.com</p>
+        </div>
+
+        <a href="quemSomos.html"><button>Quem Somos</button></a>
+      </div>
+
+      <div class="desenvolvidoCom">
+        <p>Desenvolvido com</p>
+        <img
+          src="./assets/footer/pata(desenvolvidoCom).png"
+          alt="Ícone de pata de lobo da empresa colaboradora."
+        />
+      </div>
     </footer>
-</body>
+  </body>
 </html>
